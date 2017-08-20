@@ -130,6 +130,7 @@ extern llist host_list;
 #define VTUN_UDP        0x0020  
 #define VTUN_PROT_MASK  (VTUN_TCP | VTUN_UDP) 
 #define VTUN_KEEP_ALIVE 0x0040	
+#define VTUN_KCP        0x0080  
 
 #define VTUN_ZLIB       0x0001
 #define VTUN_LZO        0x0002

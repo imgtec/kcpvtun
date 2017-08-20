@@ -75,6 +75,7 @@ struct kword cfg_param[] = {
    { "tun",	 VTUN_TUN }, 
    { "tcp",      VTUN_TCP }, 
    { "udp",      VTUN_UDP }, 
+   { "kcp",      VTUN_KCP }, 
    { "lzo",      VTUN_LZO }, 
    { "zlib",     VTUN_ZLIB }, 
    { "wait",	 1 },

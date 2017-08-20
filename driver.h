@@ -57,4 +57,7 @@ int tcp_read(int fd, char *buf);
 int udp_write(int fd, char *buf, int len);
 int udp_read(int fd, char *buf);
 
+int kcp_write(int fd, char *buf, int len);
+int kcp_read(int fd, char *buf);
+
 #endif

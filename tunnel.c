@@ -145,6 +145,20 @@ int tunnel(struct vtun_host *host)
 	   proto_read = udp_read;
 
 	   break;
+
+	case VTUN_KCP:
+	   if( (opt = udp_session(host)) == -1){
+	      vtun_syslog(LOG_ERR,"Can't establish KCP session");
+	      close(fd[1]);
+	      if( ! ( host->persist == VTUN_PERSIST_KEEPIF ) )
+		 close(fd[0]);
+	      return 0;
+	   }
+
+ 	   proto_write = kcp_write;
+	   proto_read = kcp_read;
+
+	   break;
      }
 
         switch( (pid=fork()) ){
